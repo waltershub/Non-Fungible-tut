@@ -1,7 +1,7 @@
 pragma solidity ^0.4.17;
 
 import "github.com/Arachnid/solidity-stringutils/strings.sol";
-import "https://github.com/pipermerriam/ethereum-string-utils/blob/master/contracts/StringLib.sol"
+import "github.com/pipermerriam/ethereum-string-utils/blob/master/contracts/StringLib.sol";
 
 contract HexColorToken {
 
@@ -81,13 +81,13 @@ contract HexColorToken {
     }
 
     function tokenMetadata(uint256 _tokenId) public constant returns (string infoUrl) {
-        string token = stringUtils.uintToBytes(_tokenId)
-        string end = 'HCT*'
-        string beginning = 'http://large-type.com/#*1HCT*'
+        string token = stringUtils.uintToBytes(_tokenId);
+        string end = 'HCT*';
+        string beginning = 'http://large-type.com/#*1HCT*';
         string endUrl = token.toSlice().concat(end.toSlice());
         string uniqUrl = beginning.toSlice().concat(endUrl.toSlice());
 
-        return uniqUrl
+        return uniqUrl;
 
     }
 
